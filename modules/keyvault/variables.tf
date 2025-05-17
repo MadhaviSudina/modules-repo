@@ -33,11 +33,6 @@ variable "location" {
   }
 }
 
-variable "tags" {
-  type        = map(string)
-  description = "Tags"
-}
-
 variable "sku_name" {
   type        = string
   description = "The name of the SKU for the key vault. Possible values are standard and premium."
