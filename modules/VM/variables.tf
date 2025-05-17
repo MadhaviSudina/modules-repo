@@ -72,6 +72,11 @@ variable "os" {
   }
 }
 
+variable "resource_group" {
+  type           = string
+  description    = "name of the rg"
+}
+
 variable "os_disk" {
   type = object({
     caching              = string
