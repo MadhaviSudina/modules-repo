@@ -108,7 +108,3 @@ variable "subnet_id" {
   description = "Subnet id for the VM's"
 }
 
-variable "tags" {
-  type        = map(string)
-  description = "Tags"
-}
