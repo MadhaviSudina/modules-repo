@@ -33,12 +33,6 @@ variable "location" {
   }
 }
 
-variable "tags" {
-  type        = map(string)
-  description = "Tags"
-}
-
-
 variable "vnet_address_spaces" {
   type        = list(string)
   description = "The adress spaces to utilise in the vnet"
