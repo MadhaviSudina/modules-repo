@@ -49,15 +49,6 @@ variable "linux_configuration" {
     public_key     = string
   })
 }
-
-
-variable "resource_group" {
-  type        = string
-  description = "The name of the resource group in which to deploy."
-}
-
-
-
 # variable "public_ip_address_name" {
 #   type        = string
 #   description = "Name of public IP address"
