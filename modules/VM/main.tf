@@ -22,7 +22,9 @@ resource "azurerm_linux_virtual_machine" "vm" {
     public_key = var.linux_configuration.public_key
   }
 
-  tags = var.tags
+  tags = {
+    environment = "Terraform"
+  }
 }
 
 resource "azurerm_network_interface" "nic" {
@@ -38,7 +40,9 @@ resource "azurerm_network_interface" "nic" {
 
     #public_ip_address_id          = azurerm_public_ip.public_ip.id
   }
-  tags = var.tags
+  tags = {
+    environment = "Terraform"
+  }
 }
 
 # resource "azurerm_public_ip" "public_ip" {
