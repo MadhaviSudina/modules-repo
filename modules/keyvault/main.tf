@@ -5,10 +5,12 @@ resource "azurerm_key_vault" "akv" {
   tenant_id                     = data.azurerm_client_config.current.tenant_id
   sku_name                      = var.sku_name
   enable_rbac_authorization     = var.enable_rbac_authorization
-  tags                          = var.tags
   public_network_access_enabled = var.public_network_access_enabled
   soft_delete_retention_days    = var.soft_delete_retention_days
   purge_protection_enabled      = var.purge_protection_enabled
+  tags = {
+    environment = "Terraform"
+  }
 
   network_acls {
     default_action             = var.network_acl_default_action
