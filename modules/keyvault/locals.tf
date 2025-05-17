@@ -1,8 +1,7 @@
 locals {
   regions = {
-    norwayeast = "noe"
+    eastus = "eau"
     westeurope = "weu"
-    swedencentral = "swec"
   }
 }
 
