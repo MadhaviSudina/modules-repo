@@ -28,7 +28,7 @@ variable "location" {
   description = "(Required) The Azure Region where the resource should exist. Changing this forces a new resource to be created."
 
   validation {
-    condition     = contains(["norwayeast", "westeurope", "swedencentral"], var.location)
+    condition     = contains(["eastus", "westeurope"], var.location)
     error_message = "The supplied value is not in the accepted region list"
   }
 }
