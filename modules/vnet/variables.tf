@@ -1,8 +1,3 @@
-variable "resource_group" {
-  type        = string
-  description = "The name of the resource group in which to deploy."
-}
-
 variable "proj-shortname" {
   type        = string
   description = "(Required) The identifier which should be used for this resource. Changing this forces a new resource to be created."
