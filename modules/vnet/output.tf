@@ -12,3 +12,8 @@ output "id" {
   description = "The vnet id"
   value       = azurerm_virtual_network.vnet.id
 }
+
+
+output "resource_group_name" {
+  value = azurerm_resource_group.test_rg.name
+}
