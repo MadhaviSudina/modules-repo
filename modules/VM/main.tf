@@ -25,6 +25,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
   tags = {
     environment = "Terraform"
   }
+   depends_on = [
+    azurerm_resource_group.test-rg,
+    azurerm_virtual_network.vnet,
+    azurerm_network_interface.nic
+  ]
 }
 
 resource "azurerm_network_interface" "nic" {
