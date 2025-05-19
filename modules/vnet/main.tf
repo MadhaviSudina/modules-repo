@@ -12,6 +12,11 @@ resource "azurerm_virtual_network" "vnet" {
   tags = {
     environment = "Terraform"
   }
+  
+  depends_on = [
+    azurerm_resource_group.test-rg
+  ]
+
 
 }
 
@@ -22,4 +27,8 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name                          = azurerm_virtual_network.vnet.name
   address_prefixes                              = each.value.address_prefixes
   private_link_service_network_policies_enabled = each.value.private_link_service_network_policies_enabled
+  depends_on = [
+    azurerm_resource_group.test-rg,
+    azurerm_virtual_network.vnet
+  ]
 }
