@@ -2,7 +2,7 @@
 data "azurerm_platform_image" "ubuntu" {
   location  = var.location
   publisher = "Canonical"
-  offer     = "UbuntuServer"
+  offer     = "0001-com-ubuntu-server-focal"
   sku       = "20_04-lts"
 }
 
