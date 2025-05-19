@@ -15,5 +15,5 @@ output "id" {
 
 
 output "resource_group_name" {
-  value = azurerm_resource_group.test-rg.name
+  value = azurerm_resource_group.test-rg.name
 }
