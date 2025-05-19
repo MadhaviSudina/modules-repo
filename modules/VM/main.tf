@@ -1,9 +1,9 @@
 
 data "azurerm_platform_image" "ubuntu" {
-  location  = var.location
-  publisher = "Canonical"
-  offer     = "UbuntuServer"
-  sku       = "20_04-lts"
+  location  = var.location
+  publisher = "Canonical"
+  offer     = "UbuntuServer"
+  sku       = "20_04-lts"
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
@@ -18,12 +18,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
     storage_account_type = var.os_disk.storage_account_type
   }
 
-  source_image_reference {    
+  source_image_reference {
     publisher = data.azurerm_platform_image.ubuntu.publisher
-    offer     = data.azurerm_platform_image.ubuntu.offer
-    sku       = data.azurerm_platform_image.ubuntu.sku
-    version   = data.azurerm_platform_image.ubuntu.version
-
+    offer     = data.azurerm_platform_image.ubuntu.offer
+    sku       = data.azurerm_platform_image.ubuntu.sku
+    version   = data.azurerm_platform_image.ubuntu.version
   }
   admin_username = var.linux_configuration.admin_username
   admin_ssh_key {
