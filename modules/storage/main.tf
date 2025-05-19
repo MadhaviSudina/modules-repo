@@ -8,4 +8,7 @@ resource "azurerm_storage_account" "sta" {
   tags = {
     environment = "Terraform"
   }
+   depends_on = [
+    azurerm_resource_group.test-rg
+  ]
 }
